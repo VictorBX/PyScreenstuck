@@ -13,9 +13,9 @@ Requires
 Progress
 --------
 - Checks every minute for an update
+- Sends text msg when there is a new update
 
 Todo
 ----
-- Finish implementing pygooglevoice
-- Send text msg
 - User input on time delay between checking for updates
+- User input on email, password, and google voice number??

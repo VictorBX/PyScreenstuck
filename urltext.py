@@ -1,7 +1,16 @@
 import os
 import time
 import urllib
-import time
+from googlevoice import Voice 
+from googlevoice.util import input
+
+#Setting up login info
+voice = Voice()
+voice.login("email here", "password here")
+
+#Phone number and text
+phoneNumber = "phone-number-here"
+text = "Homestuck Upd8"
 
 #Website RSS location
 w_location = "http://www.mspaintadventures.com/rss/rss.xml"
@@ -29,6 +38,8 @@ while 1:
 	#Compare
 	if check != updn:
 		print "New Update!"
+		#Send text
+		voice.send_sms(phoneNumber,text)
 		fopen_new = open("savedate.txt","w")
 		fopen_new.write(updn)
 		fopen_new.close()
