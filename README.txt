@@ -9,13 +9,13 @@ Requires
 --------
 - Google Voice Account
 - pygooglevoice
+- User input on time delay between checking for updates
 
 Progress
 --------
-- Checks every minute for an update
-- Sends text msg when there is a new update
+- Checks every specified amount of minutes for an update
+- Sends text message when there is a new update
 
 Todo
 ----
-- User input on time delay between checking for updates
 - User input on email, password, and google voice number??
