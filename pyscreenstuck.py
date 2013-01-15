@@ -28,9 +28,7 @@ if os.path.isfile("savedate.txt") == 0:
 	file_open.close()
 	
 
-	#Input for login/timer
-	email_in = raw_input("Google Voice Email: ")
-	pass_in = raw_input("Google Voice Password: ")
+	#Input for text and number
 	phone_in = raw_input("Google Voice Number: ")
 	text_in = raw_input("Text Message: ")
 	while len(text_in) > 160:
@@ -39,8 +37,6 @@ if os.path.isfile("savedate.txt") == 0:
 				
 	#Append to savedate data
 	file_append = open("savedate.txt","a")
-	file_append.write(email_in+"\n")
-	file_append.write(pass_in+"\n")
 	file_append.write(phone_in+"\n")
 	file_append.write(text_in)
 	file_append.close()
@@ -64,15 +60,13 @@ while 1:
 #Setup
 file_read = open("savedate.txt", "r")
 file_read.readline()
-emaild = file_read.readline()
-passd = file_read.readline()
 phoned = file_read.readline()
 textd = file_read.readline()
 while len(textd) > 160:
 		print "Error: Text Message over 160 characters"
 		textd = raw_input("Text Message: ")
 file_read.close()
-voice.login(emaild, passd)
+voice.login()
 
 #Clear and run
 os.system(['clear','cls'][os.name == 'nt'])
@@ -95,11 +89,10 @@ while 1:
 		voice.send_sms(phoned,textd)
 		fopen_new = open("savedate.txt","w")
 		fopen_new.write(updn+"\n")
-		fopen_new.write(emaild)
-		fopen_new.write(passd)
 		fopen_new.write(phoned)
 		fopen_new.write(textd)
 		fopen_new.close()
+
 
 	#Sleep	
 	time.sleep(60*time_wait)

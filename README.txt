@@ -15,8 +15,8 @@ Progress
 --------
 - Checks every specified amount of minutes for an update
 - Sends text message when there is a new update
-- Takes in Google Voice email, GV password, GV number (ex 123-456-7890)
-- After the first run is saves the info for later runs
+- Takes in Google Voice email, GV password, GV number (ex 123-456-7890), Text Message
+- After the first run is saves the info (except email and password) for later runs
 
 Todo
 ----
