@@ -1,23 +1,23 @@
 PyScreenstuck
-===========
+=============
 
 Introduction
 ------------
-PyScreenstuck is a Python script that checks if there is a new update on the webcomic Homestuck, created by Andrew Hussie. Is is very similar to my other project Screenstuck except for one minor difference: Instead of an image showing up on your desktop screen, a text message is sent to your phone via Google Voice. 
+PyScreenstuck is a Python GUI application that checks if there is a new update on the webcomic Homestuck, created by Andrew Hussie. Is is very similar to my other project Screenstuck except for one minor difference: Instead of an image showing up on your desktop screen, a text message is sent to your phone via Google Voice. 
 
 Requires
 --------
 - Google Voice Account
 - pygooglevoice
-- User input on time delay between checking for updates
+- PyQt4 
 
 Progress
 --------
-- Checks every specified amount of minutes for an update
+- Checks every minute for an update
 - Sends text message when there is a new update
-- Takes in Google Voice email, GV password, GV number (ex 123-456-7890), Text Message
-- After the first run is saves the info (except email and password) for later runs
+- Takes in Google Voice email, GV password, and GV number
+- Implemented GUI
 
 Todo
 ----
-- GUI??
+
